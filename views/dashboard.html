@@ -1,0 +1,49 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Storage Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="dashboard-header">
+        <h1>My Cloud Storage</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="redirectToHome()">Home</a></li>
+                <li><a href="#" onclick="fetchUserFiles()">My Files</a></li>
+                <li><a href="#" onclick="openSettings()">Settings</a></li>
+                <li><a href="#" onclick="logout()">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="dashboard-container">
+        <h2>Your Cloud Storage Dashboard</h2>
+        <p>Manage and securely store your files.</p>
+
+        <div class="file-upload-section">
+            <h3>Upload a New File</h3>
+            <div class="file-upload-card">
+                <input type="file" id="fileInput">
+                <button class="btn-upload" onclick="uploadFile()">Upload</button>
+            </div>
+            <div id="uploadProgress"></div>
+        </div>
+
+        <div class="file-list-section">
+            <h3>Your Files</h3>
+            <div id="fileGrid" class="file-grid">
+                <!-- Dynamically populated file cards will go here -->
+            </div>
+        </div>
+    </div>
+
+    <footer class="dashboard-footer">
+        <p>© 2024 Cloud Storage. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
